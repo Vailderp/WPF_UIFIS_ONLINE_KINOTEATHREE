@@ -1,0 +1,203 @@
+﻿<Page x:Class="Kinoteathree.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kinoteathree.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="RegisterPage" >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Регистрация нового аккаунта" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="40" Grid.ColumnSpan="2" Foreground="White"></TextBlock>
+
+        <Border  Grid.Row="3" Margin="0, 15, 0, 0" Padding="20" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#FF293036" CornerRadius="10" Height="450" Grid.RowSpan="2">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="42"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition Width="210"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!--Поле для ввода логина-->
+                <Label Foreground="#FFC5C5C5" Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="0"></Label>
+                <TextBox Name="TbLogin" Text="{Binding User.Login}" Width="200" Height="30" HorizontalAlignment="Center" Foreground="#FFC5C5C5"
+                         VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода пароля-->
+                <Label Foreground="#FFC5C5C5" Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"></Label>
+                <TextBox Name="TbPassword" Text="{Binding User.Password}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC5C5C5"
+                             Grid.Row="2" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Фамилии-->
+                <Label Foreground="#FFC5C5C5" Content="Фамилия" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="3" Grid.Column="0"></Label>
+                <TextBox Name="TbSecondName" Text="{Binding User.SecondName}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="3" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Имени-->
+                <Label Foreground="#FFC5C5C5" Content="Имя" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="4" Grid.Column="0"></Label>
+                <TextBox Name="TbFirstName" Text="{Binding User.FirstName}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="4" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Отчества-->
+                <Label Foreground="#FFC5C5C5" Content="Отчество" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="5" Grid.Column="0"></Label>
+                <TextBox Name="TbMiddleName" Text="{Binding User.MiddleName}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="5" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Номера Телефона-->
+                <Label Foreground="#FFC5C5C5" Content="Номер телефона" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="6" Grid.Column="0"></Label>
+                <TextBox Name="TbPhone" Text="{Binding User.Phone}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="6" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Аддр. Эл. Почты-->
+                <Label Foreground="#FFC5C5C5" Content="Электронная почта" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="7" Grid.Column="0"></Label>
+                <TextBox Name="TbMailAddress" Text="{Binding User.MailAddress}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="7" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода CVV кода банковской карты-->
+                <Label Foreground="#FFC5C5C5" Content="CVV код банк. карты" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="8" Grid.Column="0"></Label>
+                <TextBox Name="TbCvvCode" Text="{Binding User.CvvCode}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="8" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Поле для ввода Кода Банковской Карты-->
+                <Label Foreground="#FFC5C5C5" Content="Код банк. карты" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="9" Grid.Column="0"></Label>
+                <TextBox Name="TbCardCode" Text="{Binding User.CardCode}" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFC5C5C5"
+                         Grid.Row="9" Grid.Column="1" Background="#FF14181A" BorderThickness="0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <!--Кнопка регистрации-->
+                <Button Name="ButtonRegistration" Width="200" Height="35" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                        Content="Зарегистрироваться" BorderBrush="#FF5A5205" 
+                        Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"
+                        Command="{Binding RegisterCommand}" >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Foreground" Value="#FFC5C5C5" />
+                            <Setter Property="Background" Value="#FF151A1E"></Setter>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}" >
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="#FFE8E8E8" />
+                                    <Setter Property="Background" Value="#FF0E1113"></Setter>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Foreground" Value="#FFE8E8E8" />
+                                    <Setter Property="Background" Value="#FF090B0C"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Content="??">
+                    <Button.ToolTip>
+                        <ToolTip Background="IndianRed">
+                            <StackPanel>
+                                <TextBlock Text="{Binding RegisterErrorString}"></TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <!--<Line X1="0" Y1="0" X2="0" Y2="1000" Grid.Column="1" Grid.RowSpan="9" Grid.Row="1" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="2" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="3" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="4" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="5" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="6" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="7" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="8" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="9" StrokeThickness="5" Stroke="Black"></Line>
+                <Line X1="0" Y1="0" X2="1000" Y2="0" Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" StrokeThickness="5" Stroke="Black"></Line>-->
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

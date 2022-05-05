@@ -1,0 +1,36 @@
+﻿<Page x:Class="Kinoteathree.Pages.AboutCo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kinoteathree.Pages" xmlns:usercontrols="clr-namespace:Kinoteathree.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="AboutCo">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Информация о нас" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="40" Grid.ColumnSpan="2" Foreground="White"></TextBlock>
+
+        <Border Grid.Row="3" Margin="100, 15, 100, 100" Padding="20" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#FF293036" CornerRadius="10" Height="350" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <usercontrols:LargeTextBox MultiText="Все совпадения случайны, приложение создано исключительно в учебных целях. Текст, расположенный снизу, был взят с сайта ivi.ru"></usercontrols:LargeTextBox>
+                <usercontrols:LargeTextBox MultiText="Онлайн-кинотеатр №1 в России! Самый большой каталог фильмов и сериалов в России. Все 6 голливудских мейджоров и более 300 контентных партнёров. Собственная платформа по управлению данными и предложением, система аналитики и статистики. Рекомендательная система ivi на основе искусственного интеллекта и больших данных. В ivi работает большая, дружная команда, в которой уже более 700 талантливых специалистов." 
+                                           Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"></usercontrols:LargeTextBox>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
